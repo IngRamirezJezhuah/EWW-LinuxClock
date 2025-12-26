@@ -1,0 +1,40 @@
+* {
+  all: unset;
+}
+
+.contenedor {
+  background-color: #6A6868;
+  padding: 20px;
+  border-radius: 25px;
+  border: 2px solid #EBE6E6;
+}
+
+.foto {
+  border-radius: 15px;
+  margin-right: 20px;
+  background-image: url("thoru-2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /*Asefuremonos de que tenga un tamaño minimo por si el bos colapsa*/
+  min-width: 120px;
+  min-height: 120px;
+}
+
+.textos {
+  justify-content: center;
+}
+
+.estilo-hora {
+  font-family: "JetBrains Mono", "Ubuntu", sans-serif;
+  font-size: 60px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.estilo-fecha {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+  color: #a0a0b0;
+  text-transform: capitalize;
+}

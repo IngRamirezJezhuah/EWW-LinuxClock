@@ -1,0 +1,27 @@
+;; Variables que actualizan la hora y fecha
+(defpoll hora :interval "1s" "date +%H:%M:%S")
+(defpoll fecha :interval "1h" "date '+%A, %d de %B'")
+
+;; Ventana principal
+(defwindow reloj
+  :geometry (geometry :x "730px"
+                      :y "50px"
+                      :width "400px"
+                      :height "200px"
+                      :anchor "top left")
+  :stacking "bottom"
+  :windowtype "desktop"
+  :wm-ignore false
+  (caja_principal))
+
+;; Diseño del widget
+(defwidget caja_principal []
+  (box :class "contenedor" :orientation "h" :space-evenly false
+    ;; Espacio para imagen
+    (box :class "foto"
+         :width 120 :height 120)
+
+    ;; Espacio para texto
+    (box :orientation "v" :class "textos" :space-evenly false
+      (label :text hora :class "estilo-hora")
+      (label :text fecha :class "estilo-fecha"))))

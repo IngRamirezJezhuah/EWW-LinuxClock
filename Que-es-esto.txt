@@ -1,0 +1,69 @@
+Explicacion de eww.yuck (La Estructura)
+
+Este lenguaje se llama Uck (basado en Lisp), que se organiza por parentesis:
+cada vez que abrimons un "(", se esta creando un bloque o una instruccion
+
+  -Las Variables Dinamicas (defpoll)
+	____________________  
+	(defpoll hora : interval "ls" "date +%H:%M:%S")
+	____________________
+
+	- defpoll : le dice a EWW: "Oye creame una variable que se actualice sola"
+
+	- hora : Es el nombre que le pusimos.
+
+	- :interval "1s" : le indica que cada segundo ejecute el comando
+
+	- "date +%H:%M:%S": es un comando de terminal real,
+	como tal si lo escribimos en la terminal veremos que devuelve
+	la hora, EWW captura ese resultado y lo guarda en hora
+
+  - La ventana (defwindow)
+  Es el "contenedor" físico que verás en tu monitor.
+
+	- :geometry: Define posición (x, y) y tamaño (width, height).
+
+	- :anchor "top left": Indica desde dónde se cuenta la posición (esquina superior izquierda).
+
+	- :stacking "bottom": Esto es clave. 
+	Hace que el widget esté detrás de tus ventanas abiertas, 
+	como un fondo de pantalla vivo.
+
+	-:windowtype "desktop": Le dice a Linux Mint que no trate a este widget como una ventana normal (para que no aparezca en la barra de tareas).
+  - Los Widgets (defwidget)
+  Aqui definimos que hay dentro de lal ventana, es como el esqueleto
+
+	-box: Es un contenedor invisible.
+
+	-:orientation "h" u "v": Define si los elementos adentro van en fila 
+	(horizontal) o en columna (vertical).
+
+	-label: Es el comando para mostrar texto.
+
+	-:class: Es el nombre que le damos para luego "pintarlo" en el archivo 
+	de estilos (CSS).
+
+   - Explicacion de eww.scss (El Diseño)
+   Este archivo usa SASS/CSS. Es lo que le da color, bordes y 
+   fuentes al esqueleto anterior.
+
+	-* { all: unset; }: Linux Mint y GTK traen estilos por defecto 
+	(colores feos, bordes raros). Esto "limpia" todo para que empecemos de cero.
+
+	-.contenedor: Aquí definimos el fondo del widget.
+
+	-background-color: El color.
+
+	-border-radius: Qué tan redondas son las esquinas.
+
+	-.estilo-hora:
+
+	-font-family: Aquí es donde ocurre la magia de la tipografía. 
+	EWW busca en tu sistema fuentes como "JetBrains Mono".
+
+	-font-size: El tamaño de la letra.
+
+	-.foto:
+
+	-background-size: cover: Hace que la imagen se adapte al tamaño
+	 del cuadro sin deformarse.
