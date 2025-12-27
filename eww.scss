@@ -3,38 +3,39 @@
 }
 
 .contenedor {
-  background-color: #6A6868;
-  padding: 20px;
-  border-radius: 25px;
-  border: 2px solid #EBE6E6;
+  background-color: rgba(40,40,40, 0.35);
+  padding: 25px;
+  border: 1.5px solid rgba(255, 255, 255, 0.80);
+  border-radius: 35px;
 }
 
 .foto {
-  border-radius: 15px;
-  margin-right: 20px;
-  background-image: url("thoru-2.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /*Asefuremonos de que tenga un tamaño minimo por si el bos colapsa*/
-  min-width: 120px;
-  min-height: 120px;
+  padding: 25px;
+  background-color: rgba(33, 44, 53, 0.32);
+  border-radius: 50rem;
+  border: 1.5px solid rgba(205, 245, 255, 0.698);
 }
 
 .textos {
-  justify-content: center;
+  margin-left: 15px;
 }
 
 .estilo-hora {
-  font-family: "JetBrains Mono", "Ubuntu", sans-serif;
-  font-size: 60px;
+  font-family: "Permanent Marker", cursive;
+  font-size: 100px;
   font-weight: bold;
   color: #ffffff;
 }
 
 .estilo-fecha {
-  font-family: "Ubuntu", sans-serif;
-  font-size: 16px;
-  color: #a0a0b0;
-  text-transform: capitalize;
+  font-family: "Dustismo", sans-serif;
+  font-size: 30px;
+  color: #CFCCCC;
 }
+
+/*
+ las tipografias se buscan aqui
+ fc-list :family | cut -d, -f1 | sort | uniq
+ el formato para buscarla en el sistema es asi
+ fc-list | grep -i "Nombre-de-la-fuente"
+ */
