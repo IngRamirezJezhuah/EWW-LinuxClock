@@ -3,17 +3,19 @@
 }
 
 .contenedor {
-  background-color: rgba(40,40,40, 0.35);
-  padding: 25px;
-  border: 1.5px solid rgba(255, 255, 255, 0.80);
+  /*background-color: rgba(40,40,40, 0.35);*/
+  background: #8a8a8a;
+  background: linear-gradient(0deg,rgba(74, 72, 72, 0.32) 0%, rgba(196, 196, 192, 0.25) 100%);
+  padding:25px;
+  border: 1.5px solid #B6f7fa;
   border-radius: 35px;
 }
 
 .foto {
-  padding: 25px;
+  padding: 20px;
   background-color: rgba(33, 44, 53, 0.32);
-  border-radius: 50rem;
-  border: 1.5px solid rgba(205, 245, 255, 0.698);
+  border-radius: 100rem;
+  border: 2px solid rgba(205, 245, 255, 0.698);
 }
 
 .textos {

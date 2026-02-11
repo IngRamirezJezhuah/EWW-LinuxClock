@@ -4,10 +4,10 @@
 
 ;; Ventana principal
 (defwindow reloj
-  :geometry (geometry :x "750px"
+  :geometry (geometry :x "700px"
                       :y "20px"
                       :width "450px"
-                      :height "200px"
+                      :height "230px"
                       :anchor "top left")
   :stacking "bottom"
   :windowtype "desktop"
@@ -18,9 +18,9 @@
 (defwidget caja_principal []
   (box :class "contenedor" :orientation "h" :space-evenly false
     ;; Espacio para imagen
-     (image :path "/home/djxs4n/.config/eww/thoru-2.png"
-	    :image-width 125
-	    :image-height 125
+     (image :path "/home/djxs4n/.config/eww/ewwClock.png"
+	    :image-width 150
+	    :image-height 150
 	    :class "foto")
 
 
