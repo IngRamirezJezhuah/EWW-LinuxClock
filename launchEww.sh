@@ -1,14 +1,12 @@
 #!/bin/bash
 #mata cualquier instancia previa de eww
 
-kill eww
-
-sleep 1
-
+pkill eww
+sleep 0.2
 #iniciar el daemon y abrir el reloj
+CFG="$HOME/Documentos/Programacion/Proyectos-EWW/EWW-LinuxClock"
 
-eww daemon
-
+eww --config "$CFG" daemon &
 sleep 1
 
-eww open reloj
+eww --config "$CFG" open reloj
